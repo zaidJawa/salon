@@ -1,0 +1,69 @@
+{"level":"error","message":"Error in login: PrismaClientKnownRequestError: \nInvalid `prisma.user.findFirst()` invocation in\n/Users/anasaljawabrah/web/prisma-examples/orm/express/src/controller/auth.controller.ts:76:36\n\n  73 try {\n  74   const { emailOrPhone, password } = req.body;\n  75 \n→ 76   const user = await prisma.user.findFirst(\nThe table `user` does not exist in the current database.","timestamp":"2024-12-26T11:14:24.635Z"}
+{"level":"error","message":"Error in login: PrismaClientKnownRequestError: \nInvalid `prisma.user.findFirst()` invocation in\n/Users/anasaljawabrah/web/prisma-examples/orm/express/src/controller/auth.controller.ts:76:36\n\n  73 try {\n  74   const { emailOrPhone, password } = req.body;\n  75 \n→ 76   const user = await prisma.user.findFirst(\nThe table `user` does not exist in the current database.","timestamp":"2024-12-26T11:15:14.936Z"}
+{"level":"error","message":"Error in login: PrismaClientKnownRequestError: \nInvalid `prisma.user.findFirst()` invocation:\n\n\nThe table `user` does not exist in the current database.","timestamp":"2024-12-26T11:20:09.774Z"}
+{"level":"error","message":"Error in login: PrismaClientKnownRequestError: \nInvalid `prisma.user.findFirst()` invocation in\n/Users/anasaljawabrah/web/prisma-examples/orm/express/src/controller/auth.controller.ts:73:36\n\n  70 const { email, phone, password } = req.body;\n  71 \n  72 // Check if email or phone is provided, and search for the user\n→ 73 const user = await prisma.user.findFirst(\nThe table `user` does not exist in the current database.","timestamp":"2024-12-26T11:20:32.843Z"}
+{"level":"warn","message":"User with email user@gmail.com or phone undefined not found.","timestamp":"2024-12-26T11:24:55.155Z"}
+{"level":"warn","message":"User with email user@gmail.com or phone 0787878945 not found.","timestamp":"2024-12-26T11:37:59.495Z"}
+{"level":"warn","message":"User with email user@example.com or phone +1234567890 not found.","timestamp":"2024-12-26T13:42:57.737Z"}
+{"level":"warn","message":"User with email user@example.com or phone +1234567890 not found.","timestamp":"2024-12-26T13:43:19.880Z"}
+{"level":"warn","message":"User with email user@example.com or phone +1234567890 not found.","timestamp":"2024-12-26T13:43:23.553Z"}
+{"level":"warn","message":"User with email user@example.com already exists.","timestamp":"2024-12-26T13:43:41.015Z"}
+{"level":"warn","message":"User with email user@example.com or phone +1234567890 not found.","timestamp":"2024-12-26T15:01:35.365Z"}
+{"level":"warn","message":"User with email user@example.com or phone +1234567890 not found.","timestamp":"2024-12-26T15:01:39.247Z"}
+{"level":"warn","message":"User with email user@example.com already exists.","timestamp":"2024-12-26T15:01:46.395Z"}
+{"level":"warn","message":"User with email undefined or phone 0787878945 not found.","timestamp":"2024-12-26T15:10:08.956Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-27T22:26:13.296Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-27T22:26:14.292Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-27T22:26:20.063Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-27T22:26:20.866Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-27T22:26:30.873Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-27T22:26:31.390Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-27T22:26:31.545Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-27T22:26:34.104Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-27T22:26:34.270Z"}
+{"level":"warn","message":"User with email user@example.com already exists.","timestamp":"2024-12-27T22:27:47.597Z"}
+{"level":"warn","message":"User with email admin@domain.com or phone undefined not found.","timestamp":"2024-12-28T14:53:08.283Z"}
+{"level":"warn","message":"User with email admin@domain.com or phone undefined not found.","timestamp":"2024-12-28T19:28:40.213Z"}
+{"level":"warn","message":"User with email admin@domain.com or phone undefined not found.","timestamp":"2024-12-28T19:28:44.726Z"}
+{"level":"warn","message":"User with email admin@domain.com or phone undefined not found.","timestamp":"2024-12-28T19:29:02.262Z"}
+{"level":"warn","message":"User with email user@example.com or phone +1234567890 not found.","timestamp":"2024-12-28T19:29:53.513Z"}
+{"level":"warn","message":"User with email user@example.com or phone +1234567890 not found.","timestamp":"2024-12-28T19:29:55.937Z"}
+{"level":"warn","message":"User with email user@example.com or phone +1234567890 not found.","timestamp":"2024-12-28T19:29:56.764Z"}
+{"level":"warn","message":"User with email admin@domain.com or phone undefined not found.","timestamp":"2024-12-28T20:48:35.518Z"}
+{"level":"warn","message":"User with email admin@domain.com or phone undefined not found.","timestamp":"2024-12-28T20:48:36.535Z"}
+{"level":"warn","message":"User with email user@example.com already exists.","timestamp":"2024-12-28T20:59:29.817Z"}
+{"level":"warn","message":"User with email admin@domain.com already exists.","timestamp":"2024-12-28T21:08:03.388Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:00.970Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:03.588Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:04.217Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:04.684Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:04.948Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:08.486Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:11.000Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:11.614Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:29.038Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:29.739Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:29.908Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:48.129Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:48.682Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:42:48.856Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:03.891Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:04.166Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:04.333Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:04.716Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:04.904Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:05.214Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:32.362Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:32.667Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:45.824Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-28T22:43:46.556Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-29T14:54:39.331Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-29T14:54:40.612Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-29T14:55:18.766Z"}
+{"level":"warn","message":"Incorrect password for user admin@domain.com.","timestamp":"2024-12-29T14:55:19.390Z"}
+{"level":"warn","message":"User with email user@example.com or phone undefined not found.","timestamp":"2024-12-31T19:17:18.911Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-31T19:17:36.968Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-31T19:17:37.512Z"}
+{"level":"warn","message":"Incorrect password for user alice@prisma.io.","timestamp":"2024-12-31T19:21:08.163Z"}
+{"level":"error","message":"Error in register: PrismaClientKnownRequestError: \nInvalid `prisma.user.create()` invocation in\n/Users/anasaljawabrah/web/prisma-examples/orm/express/src/services/userService.ts:78:22\n\n  75 \n  76 export const createUser = async (data: { name: string; email: string; password: string; phone: string }) => {\n  77   const hashedPassword = await bcrypt.hash(data.password, 10);\n→ 78   return prisma.user.create(\nUnique constraint failed on the constraint: `User_phone_key`","timestamp":"2025-01-01T13:16:02.460Z"}
+{"level":"error","message":"Error in register: PrismaClientKnownRequestError: \nInvalid `prisma.user.create()` invocation in\n/Users/anasaljawabrah/web/prisma-examples/orm/express/src/services/userService.ts:78:22\n\n  75 \n  76 export const createUser = async (data: { name: string; email: string; password: string; phone: string }) => {\n  77   const hashedPassword = await bcrypt.hash(data.password, 10);\n→ 78   return prisma.user.create(\nUnique constraint failed on the constraint: `User_phone_key`","timestamp":"2025-01-01T13:16:08.016Z"}

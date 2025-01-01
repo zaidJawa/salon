@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String      @id @default(uuid()) @db.Char(36)
+  name      String
+  email     String      @unique
+  phone     String      @unique
+  password  String
+  role      Role        @default(user)
+  bookings  Booking[]
+  salons    UserSalon[]
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+}
+
+model BeautySalon {
+  id                String      @id @default(uuid()) @db.Char(36)
+  name              String      @unique
+  location          String
+  phone             String
+  services          Services[]
+  bookings          Booking[]
+  users             UserSalon[]
+  startWorkingHours String
+  endWorkingHours   String
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+}
+
+
+model UserSalon {
+  userId     String
+  salonId    String
+  assignedAt DateTime
+  user       User        @relation(fields: [userId], references: [id])
+  salon      BeautySalon @relation(fields: [salonId], references: [id])
+
+  @@id([userId, salonId])
+}
+
+model Booking {
+  id           String       @id @default(uuid()) @db.Char(36)
+  userId       String       @db.Char(36)
+  beautySalonId String      @db.Char(36)
+  date         DateTime
+  status       Status       @default(pending)
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  user         User         @relation(fields: [userId], references: [id])
+  beautySalon  BeautySalon  @relation(fields: [beautySalonId], references: [id])
+  services     BookingService[]
+}
+
+model Services {
+  id            String       @id @default(uuid()) @db.Char(36)
+  name          String
+  price         Float
+  durationInMin Float
+  salonId       String       @db.Char(36)
+  salon         BeautySalon  @relation(fields: [salonId], references: [id])
+  bookings      BookingService[]
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+}
+
+model BookingService {
+  bookingId String
+  serviceId String
+  booking   Booking    @relation(fields: [bookingId], references: [id])
+  service   Services   @relation(fields: [serviceId], references: [id])
+
+  @@id([bookingId, serviceId])
+}
+
+enum Role {
+  user
+  admin
+  super_admin
+}
+
+enum Status {
+  pending
+  approved
+  completed
+  cancelled
+}

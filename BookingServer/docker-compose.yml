@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  # Application service: Express app running on Node.js
+  app:
+    container_name: salon-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # Expose port 8000 for the application (from .env)
+    environment:
+      - NODE_ENV=${NODE_ENV} # Load environment from .env (dev)
+      - PORT=${PORT} # Load port from .env (8000)
+      - DATABASE_URL=${DATABASE_URL} # MySQL connection URL from .env
+      - ACCESS_SECRET_TOKEN=${ACCESS_SECRET_TOKEN} # Access token secret from .env
+      - CLIENT_URL=${CLIENT_URL} # Client URL from .env (localhost)
+    volumes:
+      - .:/app # Bind current directory to /app inside the container
+      - /app/node_modules # Persist node_modules folder
+    networks:
+      - app-network
+
+  # Test service for running tests
+  test:
+    build: .
+    command: npm test # Run tests when the container starts
+    volumes:
+      - .:/app # Bind current directory to /app inside the container
+      - /app/node_modules # Persist node_modules folder
+    depends_on:
+      - redis # Ensure Redis starts before the test service
+    environment: NODE_ENV=test # Set environment to test for this service
+
+# Define a network for inter-container communication
+networks:
+  app-network:
+    driver: bridge
